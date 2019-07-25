@@ -4,14 +4,15 @@ import { useLocalStorage } from "./useLocalStorage";
 const useDarkMode = (initialValue) => {
 
 
-  const [darkMode, setDarkMode] = useLocalStorage("darkModeActive", initialValue);
+  const [darkMode, setDarkMode] = useLocalStorage("darkMode", initialValue);
 
   useEffect(() => {
     if (initialValue === true) {
-      document.querySelector=('body').classList.add("dark-mode");
+      document.querySelector("body").classList.add("dark-mode");
 
     } else {
-      document.querySelector=('body').classList.remove("dark-mode");
+      document.querySelector("body").classList.remove("dark-mode");
+
     }
   }, [initialValue]);
 
