@@ -1,8 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router, Route } from "react-router-dom";
+import { useState } from "react";
 
-
-export default const useLocalStorage = (key, initialValue) => {
+export const useLocalStorage = (key, initialValue) => {
   if (typeof key !== 'string')
     throw new Error("Invalid parameters: useLocalStorage(key, value)");
 
